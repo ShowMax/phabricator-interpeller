@@ -14,7 +14,7 @@ All codes are already liberated through Arcanist so everything necessary for ins
 Put all codes next to Phabricator main directory (where arcanist, libphutil and phabricator itself are stored)
 and add following configuration to Phabricator:
 
-	./phabricator/bin/config set load-libraries '{ "phabricator-interpeller": "..\/phabricator-interpeller\/src" }'
+	./phabricator/bin/config set load-libraries '{ "phabricator-interpeller": "phabricator-interpeller\/src" }'
 
 ## Application
 
