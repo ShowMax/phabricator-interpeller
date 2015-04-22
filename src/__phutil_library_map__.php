@@ -22,7 +22,7 @@ phutil_register_library_map(array(
     'InterpellerBaseController' => 'PhabricatorController',
     'InterpellerGraphController' => 'InterpellerBaseController',
     'InterpellerGraphView' => 'AphrontView',
-    'KanbanApplication' => 'PhabricatorApplication',
-    'KanbanController' => 'PhabricatorController',
+/*    'KanbanApplication' => 'PhabricatorApplication',
+'KanbanController' => 'PhabricatorController',*/
   ),
 ));
