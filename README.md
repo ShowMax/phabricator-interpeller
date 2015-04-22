@@ -45,12 +45,12 @@ Dependency graph is displayed according to D3 Force package from www.d3js.org.
 You have to include this JavaScript library into your web space - I did it through Apache httpd.conf configuration
 through two different settings:
 
-	Alias /ours-js/d3.v3.min.js /export/phabricator/phabricator-interpeller/src/interpeller/js/d3.v3.min.js
+	Alias /phabricator-interpeller/d3.v3.min.js /export/phabricator/phabricator-interpeller/src/interpeller/js/d3.v3.min.js
 
-	RewriteRule ^/ours-js/(.*)      -       [L,QSA]
+	RewriteRule ^/phabricator-interpeller/(.*)      -       [L,QSA]
 
-First one defines internal alias (we use /ours-js folder) for full path to installed JavaScript library. Second one
-only excludes the whole folder /ours-js from all rewriting of Phabricator web space. You can run Phabricator on HTTP
+First one defines internal alias (we use /phabricator-interpeller folder) for full path to installed JavaScript library. Second one
+only excludes the whole folder /phabricator-interpeller from all rewriting of Phabricator web space. You can run Phabricator on HTTP
 or HTTPS protocol, there is no difference (internal links goes to `//hostname`).
 
 ## Acknowledgements

@@ -10,7 +10,7 @@ final class InterpellerGraphView extends AphrontView {
 	private $uri = NULL;
 
 	public function setURI ( $uri ) {
-		$this->uri = '//' . $uri . '/ours-js/d3.v3.min.js';
+		$this->uri = '//' . $uri . '/phabricator-interpeller/d3.v3.min.js';
 	}
 
 	public function setHeader ( $header ) {
