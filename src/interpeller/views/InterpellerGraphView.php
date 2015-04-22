@@ -144,6 +144,9 @@ EOT;
 			$label = "T$id";
 			$label = phutil_escape_html( $label );
 
+			$short_title = "T$id: " . trim( $task->getTitle() );
+			$short_title = phutil_escape_html( $short_title );
+
 			$meta_id = $response->addMetadata( array( 'hoverPHID' => $phid ) );
 
 			$show = 1;
@@ -154,7 +157,7 @@ EOT;
 				$show = 0;
 
 			$script_code .= <<<EOT
-	var node = { label: "$label", title: "$title", color: "$color", meta: "$meta_id", show: "$show", my: "$myTask", adjacentNodes: [], adjacentLinks: [], progress: $progress, estimatedHours: $estimatedHours };
+	var node = { label: "$label", title: "$title", short_title: "$short_title", color: "$color", meta: "$meta_id", show: "$show", my: "$myTask", adjacentNodes: [], adjacentLinks: [], progress: $progress, estimatedHours: $estimatedHours };
 	nodes.push( node );
 
 EOT;
@@ -314,7 +317,7 @@ EOT;
 	anchorNode.append("svg:text")
 		.attr( 'data-sigil', 'hovercard' )
 		.attr( 'data-meta', function ( d ) { if ( d ) return d.node.meta; } )
-		.text( function(d, i) { return i % 2 == 0 ? "" : d.node.label })
+		.text( function(d, i) { return i % 2 == 0 ? "" : d.node.short_title })
 		.style( "fill", function ( d ) { return d.node.color; } )
 		.style( "font-family", "Arial" )
 		.style( "font-size", 12 )
